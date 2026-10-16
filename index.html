@@ -4,67 +4,429 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aksikontal | By Aliy</title>
+  <meta name="theme-color" content="#172b46">
+
+  <title>Aksikontal — By Aliy</title>
+  <meta name="description" content="Discover Aksikontal, an early-stage conceptual framework by Aliy exploring gravity, motion, energy, electricity, and probability.">
+
   <style>
-    * { box-sizing: border-box; }
+    :root {
+      --navy: #172b46;
+      --navy-light: #243d5e;
+      --cream: #f1e7d0;
+      --paper: #fff9ec;
+      --gold: #b99a58;
+      --gold-light: #d9bd79;
+      --ink: #24354b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      background: #f1e7d0;
-      color: #172b46;
-      font-family: Georgia, serif;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.8;
+    }
+
+    a {
+      color: var(--navy-light);
+    }
+
+    .hero {
+      padding: 64px 20px 70px;
+      text-align: center;
+      color: var(--cream);
+      background: var(--navy);
+      border-bottom: 7px solid var(--gold);
+    }
+
+    .eyebrow {
+      color: var(--gold-light);
+      font-size: 0.9rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 18px 0;
+      font-size: clamp(2.5rem, 9vw, 5rem);
+      letter-spacing: 7px;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      max-width: 700px;
+      margin: 20px auto;
+      font-size: clamp(1.05rem, 3.5vw, 1.45rem);
+      line-height: 1.6;
+    }
+
+    .founder {
+      color: var(--gold-light);
+      font-size: 1.2rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px 24px;
+      padding: 17px 12px;
+      background: var(--paper);
+      border-bottom: 1px solid var(--gold);
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    main {
+      width: min(900px, 100%);
+      margin: auto;
+      padding: 30px 18px 55px;
+    }
+
+    section {
+      margin: 24px 0;
+      padding: clamp(22px, 5vw, 44px);
+      background: var(--paper);
+      border: 1px solid var(--gold);
+      box-shadow: 0 4px 15px rgba(23, 43, 70, 0.05);
+      scroll-margin-top: 20px;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: var(--navy);
+      text-align: center;
+      font-size: clamp(1.6rem, 5vw, 2.2rem);
+      line-height: 1.35;
+    }
+
+    h3 {
+      color: var(--navy);
+      margin-bottom: 5px;
+    }
+
+    .ornament {
+      width: 100px;
+      height: 2px;
+      margin: 20px auto 28px;
+      background: var(--gold);
+    }
+
+    .lead {
+      font-size: 1.12rem;
+    }
+
+    .field {
+      padding: 15px 0;
+      border-bottom: 1px solid #dfd1b2;
+    }
+
+    .field:last-child {
+      border-bottom: none;
+    }
+
+    .notice {
+      padding: 20px;
+      border-left: 4px solid var(--gold);
+      background: #f4ecd9;
+    }
+
+    .status {
+      display: inline-block;
+      padding: 5px 13px;
+      border: 1px solid var(--gold);
+      color: var(--navy);
+      letter-spacing: 1px;
+      font-size: 0.85rem;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 11px 20px;
+      background: var(--navy);
+      color: var(--cream);
+      border: 1px solid var(--gold);
+      text-decoration: none;
+    }
+
+    .button:hover {
+      background: var(--navy-light);
+    }
+
+    .center {
       text-align: center;
     }
-    header {
-      padding: 50px 20px;
-      background: #172b46;
-      color: #f1e7d0;
-      border-bottom: 5px solid #b99a58;
+
+    footer {
+      padding: 35px 20px;
+      text-align: center;
+      background: var(--navy);
+      color: var(--cream);
+      border-top: 5px solid var(--gold);
     }
-    h1 { font-size: clamp(38px, 9vw, 68px); letter-spacing: 5px; }
-    .gold { color: #d9bd79; }
-    main { max-width: 760px; margin: auto; padding: 28px 20px; }
-    section {
-      padding: 22px;
-      margin: 20px 0;
-      border: 1px solid #b99a58;
-      background: #fff9ec;
-      line-height: 1.7;
+
+    footer p {
+      margin: 5px;
     }
-    a { color: #172b46; }
-    footer { padding: 25px; background: #172b46; color: #f1e7d0; }
+
+    footer .gold {
+      color: var(--gold-light);
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 45px 16px 50px;
+      }
+
+      h1 {
+        letter-spacing: 4px;
+      }
+
+      nav {
+        gap: 8px 15px;
+      }
+
+      main {
+        padding: 16px 12px 35px;
+      }
+
+      section {
+        margin: 16px 0;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <header>
-    <p class="gold">AN EARLY-STAGE CONCEPTUAL FRAMEWORK</p>
+  <header class="hero">
+    <p class="eyebrow">An Early-Stage Conceptual Framework</p>
+
     <h1>AKSIKONTAL</h1>
-    <p>A Framework for Understanding Gravity, Motion, Energy, and Probability</p>
-    <p class="gold">Founded by Aliy</p>
+
+    <div class="ornament"></div>
+
+    <p class="subtitle">
+      A Framework for Understanding Gravity, Motion, Energy, and Probability
+    </p>
+
+    <p class="founder">Created by Aliy</p>
+    <span class="status">FIRST EDITION PROJECT</span>
   </header>
+
+  <nav aria-label="Main navigation">
+    <a href="#about">About</a>
+    <a href="#principles">Core Areas</a>
+    <a href="#method">Method</a>
+    <a href="#status">Scientific Status</a>
+    <a href="#manuscript">Manuscript</a>
+  </nav>
+
   <main>
-    <section>
-      <h2>Welcome to Aksikontal</h2>
-      <p>Aksikontal is an independent learning project exploring ideas related to gravity, motion, energy, electricity, and probability.</p>
+    <section id="about">
+      <h2>What Is Aksikontal?</h2>
+      <div class="ornament"></div>
+
+      <p class="lead">
+        Aksikontal is an early-stage conceptual framework created by Aliy
+        to organize and explore questions about the physical world through
+        mathematics, logical reasoning, and testable ideas.
+      </p>
+
+      <p>
+        Its purpose is to bring related questions and mathematical
+        relationships into one organized project. It explores how concepts
+        such as gravity, motion, energy, electricity, and probability can
+        be described, compared, and investigated.
+      </p>
+
+      <p>
+        Aksikontal is a work in progress. Its definitions, equations, and
+        proposed connections may be revised as the project develops and
+        as evidence is examined.
+      </p>
     </section>
-    <section>
-      <h2>About the Project</h2>
-      <p>This project organizes questions, definitions, and mathematical ideas into a framework for further study. It is a work in progress, not an established scientific theory.</p>
+
+    <section id="principles">
+      <h2>Five Areas of Exploration</h2>
+      <div class="ornament"></div>
+
+      <div class="field">
+        <h3>01 — Gravity</h3>
+        <p>
+          Exploring gravitational attraction, the relationship between
+          mass and distance, and how gravity is described in established
+          physics.
+        </p>
+      </div>
+
+      <div class="field">
+        <h3>02 — Motion</h3>
+        <p>
+          Examining how an object's position and velocity change over time,
+          including the role of acceleration.
+        </p>
+      </div>
+
+      <div class="field">
+        <h3>03 — Energy</h3>
+        <p>
+          Studying energy as a physical quantity and exploring how it is
+          transferred or transformed in physical systems.
+        </p>
+      </div>
+
+      <div class="field">
+        <h3>04 — Electricity</h3>
+        <p>
+          Investigating electrical quantities such as voltage, current,
+          and resistance, while keeping their definitions distinct from
+          mechanical quantities such as speed.
+        </p>
+      </div>
+
+      <div class="field">
+        <h3>05 — Probability</h3>
+        <p>
+          Describing uncertainty and possible outcomes with mathematical
+          models, observations, and statistical reasoning.
+        </p>
+      </div>
     </section>
-    <section>
+
+    <section id="method">
+      <h2>How the Framework Is Developed</h2>
+      <div class="ornament"></div>
+
+      <p>
+        Aksikontal aims to develop its ideas through a careful and
+        transparent process:
+      </p>
+
+      <div class="field">
+        <h3>1. Define</h3>
+        <p>Explain each variable, quantity, assumption, and equation clearly.</p>
+      </div>
+
+      <div class="field">
+        <h3>2. Compare</h3>
+        <p>
+          Compare each idea with existing mathematics, physics, and
+          relevant scientific literature.
+        </p>
+      </div>
+
+      <div class="field">
+        <h3>3. Predict</h3>
+        <p>
+          State what an idea predicts and how that prediction could
+          be checked.
+        </p>
+      </div>
+
+      <div class="field">
+        <h3>4. Test and Revise</h3>
+        <p>
+          Examine reliable evidence, acknowledge uncertainty, and revise
+          ideas when the results do not support them.
+        </p>
+      </div>
+    </section>
+
+    <section id="status">
       <h2>Scientific Status</h2>
-      <p>Some equations and concepts discussed here are already part of established physics. Any new claims require clear predictions, reliable experiments, comparison with existing research, and independent review.</p>
+      <div class="ornament"></div>
+
+      <p>
+        Aksikontal is currently an independent, early-stage conceptual
+        project. It has not been validated as a new scientific theory.
+      </p>
+
+      <div class="notice">
+        Some equations and concepts considered in the project are already
+        part of established physics or mathematics. Presenting them in a
+        new framework does not by itself establish a new discovery.
+      </div>
+
+      <p>
+        Any claim of a new scientific contribution would require precise
+        definitions, predictions that can be tested, appropriate evidence,
+        comparison with existing theories, and independent scientific
+        scrutiny.
+      </p>
+
+      <p>
+        The project welcomes careful questions, corrections, and
+        evidence-based discussion.
+      </p>
     </section>
-    <section>
-      <h2>The Manuscript</h2>
-      <p>The Aksikontal manuscript is being developed. Further chapters, references, and revisions will be added as the project progresses.</p>
+
+    <section id="manuscript">
+      <h2>The Aksikontal Manuscript</h2>
+      <div class="ornament"></div>
+
+      <p>
+        The manuscript is being developed to document the framework's
+        definitions, mathematical ideas, questions, and references.
+        Future revisions may expand or correct its contents.
+      </p>
+
+      <p>
+        A public manuscript link will be added here when a stable,
+        shareable edition is available.
+      </p>
+
+      <div class="center">
+        <span class="status">MANUSCRIPT IN DEVELOPMENT</span>
+      </div>
     </section>
+
     <section>
-      <h2>Contact & Attribution</h2>
-      <p>Project name: Aksikontal</p>
-      <p>Author pen name: Aliy</p>
-      <p>Independent educational project. All ideas remain open to testing and revision.</p>
+      <h2>Author's Note</h2>
+      <div class="ornament"></div>
+
+      <p>
+        Aksikontal began as an effort to organize questions about how
+        the world works. The project is intended to support learning,
+        curiosity, and careful investigation—not to replace established
+        scientific knowledge without evidence.
+      </p>
+
+      <p class="center">
+        <strong>— Aliy</strong>
+      </p>
     </section>
   </main>
-  <footer>AKSIKONTAL · FIRST EDITION PROJECT · BY ALIY</footer>
+
+  <footer>
+    <p class="gold">AKSIKONTAL</p>
+    <p>A Framework for Understanding the Physical World</p>
+    <p>Created by Aliy</p>
+    <p>&copy; <span id="year">2026</span> Aksikontal Project</p>
+    <p class="gold">An independent educational project</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
 </body>
 </html>
+
