@@ -6,352 +6,314 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aksikontal Learning Center</title>
 <style>
-:root {
-  --paper: #f4eddd;
-  --card: #fffaf0;
-  --ink: #352719;
-  --muted: #796a56;
-  --line: #cbbb9d;
-  --accent: #81552d;
-  --blue: #dce8ef;
-}
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  background: var(--paper);
-  color: var(--ink);
-  font-family: Georgia, "Times New Roman", serif;
-  line-height: 1.7;
-}
-header {
-  padding: 30px 18px;
-  text-align: center;
-  background: #e6dac2;
-  border-bottom: 3px double var(--line);
-}
-header h1 { margin: 0; font-size: clamp(27px, 6vw, 42px); }
-header p { margin: 7px auto 0; color: var(--muted); }
-nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 8px;
-  padding: 12px;
-  background: #efe4d0;
-  border-bottom: 1px solid var(--line);
-}
-nav a {
-  color: var(--ink);
-  padding: 5px 10px;
-  text-decoration: none;
-  border: 1px solid var(--line);
-  border-radius: 4px;
-  font-size: 14px;
-}
-main { max-width: 900px; margin: auto; padding: 18px; }
-section {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 20px;
-  margin: 18px 0;
-  box-shadow: 0 3px 10px #3527190c;
-}
-h2 { margin-top: 0; border-bottom: 1px solid var(--line); padding-bottom: 8px; }
-h3 { margin-bottom: 5px; }
-.note {
-  padding: 12px;
-  border-left: 4px solid var(--accent);
-  background: #f0e5d1;
-}
-.science {
-  padding: 12px;
-  border-left: 4px solid #53758c;
-  background: var(--blue);
-}
-.formula {
-  overflow-wrap: anywhere;
-  text-align: center;
-  font-size: clamp(19px, 4vw, 26px);
-  padding: 14px 8px;
-  background: #f0e5d1;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-}
-.control { margin: 20px 0; }
-.control label {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  flex-wrap: wrap;
-  font-weight: bold;
-}
-input[type="range"] { width: 100%; accent-color: var(--accent); }
-button {
-  border: 1px solid var(--accent);
-  background: var(--accent);
-  color: white;
-  border-radius: 5px;
-  padding: 10px 14px;
-  font-family: inherit;
-  font-size: 15px;
-  cursor: pointer;
-}
-button.secondary { background: transparent; color: var(--ink); }
-button:focus, input:focus { outline: 2px solid #53758c; outline-offset: 3px; }
-.stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 10px;
-  margin: 15px 0;
-}
-.stat {
-  background: #f0e5d1;
-  border: 1px solid var(--line);
-  padding: 12px;
-  border-radius: 6px;
-}
-.stat strong { display: block; font-size: 20px; overflow-wrap: anywhere; }
-.planet-wrap {
-  background: #f0e5d1;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  padding: 10px;
-  text-align: center;
-}
-#planet { width: 130px; height: 130px; display: block; margin: auto; }
-.small { font-size: 13px; color: var(--muted); }
-footer {
-  text-align: center;
-  padding: 24px 16px;
-  border-top: 3px double var(--line);
-  color: var(--muted);
-}
-li { margin-bottom: 7px; }
+:root{--paper:#f4eddd;--card:#fffaf0;--ink:#352719;--muted:#796a56;--line:#cbbb9d;--accent:#81552d;--blue:#dce8ef}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.7}
+header{padding:30px 18px;text-align:center;background:#e6dac2;border-bottom:3px double var(--line)}
+header h1{margin:0;font-size:clamp(27px,6vw,42px)}
+header p{margin:7px auto 0;color:var(--muted)}
+nav{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;padding:12px;background:#efe4d0;border-bottom:1px solid var(--line)}
+nav a{color:var(--ink);padding:5px 10px;text-decoration:none;border:1px solid var(--line);border-radius:4px;font-size:14px}
+main{max-width:900px;margin:auto;padding:18px}
+section{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:20px;margin:18px 0;box-shadow:0 3px 10px #3527190c}
+h2{margin-top:0;border-bottom:1px solid var(--line);padding-bottom:8px}
+h3{margin-bottom:5px}
+.note{padding:12px;border-left:4px solid var(--accent);background:#f0e5d1}
+.science{padding:12px;border-left:4px solid #53758c;background:var(--blue)}
+.formula{overflow-wrap:anywhere;text-align:center;font-size:clamp(19px,4vw,26px);padding:14px 8px;background:#f0e5d1;border:1px solid var(--line);border-radius:6px}
+.control{margin:20px 0}
+.control label{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-weight:bold}
+input[type=range]{width:100%;accent-color:var(--accent)}
+button{border:1px solid var(--accent);background:var(--accent);color:white;border-radius:5px;padding:10px 14px;font-family:inherit;font-size:15px;cursor:pointer}
+button.secondary{background:transparent;color:var(--ink)}
+button:focus,input:focus{outline:2px solid #53758c;outline-offset:3px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:15px 0}
+.stat{background:#f0e5d1;border:1px solid var(--line);padding:12px;border-radius:6px}
+.stat strong{display:block;font-size:20px;overflow-wrap:anywhere}
+.planet-wrap{background:#f0e5d1;border:1px solid var(--line);border-radius:6px;padding:10px;text-align:center}
+#planet{width:130px;height:130px;display:block;margin:auto}
+.small{font-size:13px;color:var(--muted)}
+footer{text-align:center;padding:24px 16px;border-top:3px double var(--line);color:var(--muted)}
+li{margin-bottom:7px}
 </style>
 </head>
 <body>
-
 <header>
-  <h1>Aksikontal Learning Center</h1>
-  <p>A Classic Introduction to Scientific Ideas, Equations, and Hypotheses</p>
-  <p class="small">An independent learning project by Aliy Agni</p>
+<h1>Aksikontal Learning Center</h1>
+<p>A Classic Introduction to Scientific Ideas, Equations, and Hypotheses</p>
+<p class="small">An independent learning project by Aliy Agni</p>
 </header>
 
 <nav>
-  <a href="#beginning">Beginning</a>
-  <a href="#gravity">Gravity</a>
-  <a href="#lab">Gravity Lab</a>
-  <a href="#aksikontal">Aksikontal-G</a>
-  <a href="#method">Scientific Method</a>
+<a href="#beginning">Beginning</a>
+<a href="#variables">A, M, V & E</a>
+<a href="#gravity">Gravity</a>
+<a href="#lab">Gravity Lab</a>
+<a href="#aksikontal">Aksikontal-G</a>
+<a href="#games">Learning Games</a>
+<a href="#method">Scientific Method</a>
 </nav>
 
 <main>
 <section id="beginning">
-  <h2>1. The Beginning of Aksikontal</h2>
-  <p>Welcome to the Aksikontal Learning Center. This course begins with simple questions and develops ideas step by step. No advanced mathematics is required to begin.</p>
-  <p>Aksikontal is a developing personal framework that explores possible mathematical relationships involving mass, gravity, motion, voltage, energy, and probability.</p>
-  <div class="note">
-    <strong>Important distinction:</strong> Aksikontal is not an established scientific theory. Its proposed ideas must be separated from established science and tested before they can be accepted as scientific explanations.
-  </div>
-  <h3>How do we begin?</h3>
-  <ol>
-    <li>Ask a clear question about a natural phenomenon.</li>
-    <li>Learn what established science already explains.</li>
-    <li>Define the variables and their units.</li>
-    <li>Build a mathematical hypothesis.</li>
-    <li>Compare its predictions with observations or experiments.</li>
-  </ol>
+<h2>1. The Beginning of Aksikontal</h2>
+<p>Welcome to the Aksikontal Learning Center. This course begins with simple questions and develops ideas step by step. No advanced mathematics is required to begin.</p>
+<p>Aksikontal is a developing personal framework that explores possible mathematical relationships involving mass, gravity, motion, voltage, energy, and probability.</p>
+<div class="note"><strong>Important distinction:</strong> Aksikontal is not an established scientific theory. Its proposed ideas must be separated from established science and tested before they can be accepted as scientific explanations.</div>
+<h3>How do we begin?</h3>
+<ol>
+<li>Ask a clear question about a natural phenomenon.</li>
+<li>Learn what established science already explains.</li>
+<li>Define the variables and their units.</li>
+<li>Build a mathematical hypothesis.</li>
+<li>Compare its predictions with observations or experiments.</li>
+</ol>
+</section>
+
+<section id="variables">
+<h2>2. The First Aksikontal Concept</h2>
+<p>Start with the original conceptual expression we recorded:</p>
+<div class="formula"><strong>A = f(M, V, E)</strong></div>
+<p>This means that A is an output or result described by a function involving M, V, and E. The symbol <strong>f</strong> means “a relationship or rule that still needs to be defined.” This is a starting framework, not yet a complete numerical equation: we still need to define exactly how the variables interact.</p>
+<div class="note"><strong>Important:</strong> The meanings below describe the current Aksikontal project notes. They are working definitions, not established laws of physics.</div>
+<h3>What does each letter mean?</h3>
+<div class="stats">
+<div class="stat"><strong>A</strong><span><b>Output / result</b><br>The result the model aims to describe or estimate.</span></div>
+<div class="stat"><strong>M</strong><span><b>Mass and gravity</b><br>Aksikontal's concept combining mass and gravitational attraction.</span></div>
+<div class="stat"><strong>V</strong><span><b>Voltage and velocity</b><br>A proposed connection between electrical voltage and speed/motion. The exact relationship is not defined yet.</span></div>
+<div class="stat"><strong>E</strong><span><b>Event probability</b><br>A chance associated with an outcome, such as a 70% chance of moving right.</span></div>
+</div>
+<h3>What about G?</h3>
+<p><strong>Aksikontal-G</strong> is the gravity-focused branch of the project. It explores mass and gravitational attraction. An influence from another universe is currently only a speculative idea; no evidence for it is provided here.</p>
+
+<h3>Learn by changing the example</h3>
+<p>Choose a probability and see how the chance changes. This demo explains probability only; it does not calculate the full Aksikontal function.</p>
+<div class="control">
+<label for="chance"><span>Chance of moving right (E)</span><span id="chanceValue">70%</span></label>
+<input id="chance" type="range" min="0" max="100" value="70" step="5">
+</div>
+<div class="stats">
+<div class="stat"><span class="small">Chance of moving right</span><strong id="rightChance">70%</strong></div>
+<div class="stat"><span class="small">Chance of not moving right</span><strong id="otherChance">30%</strong></div>
+</div>
+<div class="planet-wrap">
+<div id="chanceTrack" style="font-size:36px;letter-spacing:4px">➡️ ➡️ ➡️ ⬅️ ➡️</div>
+<p id="chanceExplain">A 70% chance means 70 out of 100 equally likely trials would be expected to move right in the long run.</p>
+</div>
 </section>
 
 <section id="gravity">
-  <h2>2. Understanding Gravity First</h2>
-  <p>Gravity is an interaction between objects with mass. Newton's law of universal gravitation describes the gravitational force between two masses.</p>
-  <div class="formula">F = G × (M × m) / r²</div>
-  <p>Here, <strong>F</strong> is gravitational force, <strong>G</strong> is the gravitational constant, <strong>M</strong> and <strong>m</strong> are the two masses, and <strong>r</strong> is the distance between their centers.</p>
-  <p>For an object at distance <em>r</em> from the center of a spherical body with mass <em>M</em>, the gravitational acceleration in the Newtonian model is:</p>
-  <div class="formula">g = G × M / r²</div>
-  <ul>
-    <li><strong>g:</strong> gravitational acceleration, measured in m/s².</li>
-    <li><strong>G:</strong> gravitational constant, approximately 6.67430 × 10⁻¹¹ m³/(kg·s²).</li>
-    <li><strong>M:</strong> mass of the central body, measured in kilograms.</li>
-    <li><strong>r:</strong> distance from the body's center, measured in meters.</li>
-  </ul>
-  <div class="science">
-    <strong>Established science:</strong> If the central mass stays constant, doubling the distance from its center makes the predicted gravitational acceleration one quarter as large. This is an inverse-square relationship.
-  </div>
+<h2>3. Understanding Gravity First</h2>
+<p>Gravity is an interaction between objects with mass. Newton's law of universal gravitation describes the gravitational force between two masses.</p>
+<div class="formula">F = G × (M × m) / r²</div>
+<p><strong>F</strong> is gravitational force, <strong>G</strong> is the gravitational constant, <strong>M</strong> and <strong>m</strong> are the two masses, and <strong>r</strong> is the distance between their centers.</p>
+<p>For an object at distance r from the center of a spherical body with mass M, the gravitational acceleration in the Newtonian model is:</p>
+<div class="formula">g = G × M / r²</div>
+<ul>
+<li><strong>g:</strong> gravitational acceleration, measured in m/s².</li>
+<li><strong>G:</strong> gravitational constant, approximately 6.67430 × 10⁻¹¹ m³/(kg·s²).</li>
+<li><strong>M:</strong> mass of the central body, measured in kilograms.</li>
+<li><strong>r:</strong> distance from the body's center, measured in meters.</li>
+</ul>
+<div class="science"><strong>Established science:</strong> If the central mass stays constant, doubling the distance from its center makes the predicted gravitational acceleration one quarter as large.</div>
 </section>
 
 <section id="lab">
-  <h2>3. Gravity Lab — Interactive Simulation</h2>
-  <p>Move the sliders to change the planet's mass and the distance from its center. The numerical result and the substituted equation update automatically.</p>
+<h2>4. Gravity Lab — Interactive Simulation</h2>
+<p>Move the sliders to change the planet's mass and the distance from its center. The numerical result and substituted equation update automatically.</p>
+<div class="planet-wrap">
+<svg id="planet" viewBox="0 0 140 140" role="img" aria-label="Illustration of a planet">
+<defs><linearGradient id="planetColor" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#8eb7c9"/><stop offset="100%" stop-color="#315b7c"/></linearGradient></defs>
+<circle cx="70" cy="70" r="48" fill="url(#planetColor)" stroke="#27475d" stroke-width="2"/>
+<path d="M35 49 L52 37 L65 47 L59 61 L43 65 Z M75 31 L91 42 L86 55 L72 51 Z M68 75 L85 66 L102 81 L94 101 L77 105 L65 91 Z M35 82 L51 76 L57 93 L46 105 L34 97 Z" fill="#80a67c"/>
+<ellipse cx="70" cy="70" rx="59" ry="17" fill="none" stroke="#81552d" stroke-width="2" stroke-dasharray="5 4" transform="rotate(-25 70 70)"/>
+</svg>
+<p class="small">Illustrative planet — not to scale</p>
+</div>
 
-  <div class="planet-wrap">
-    <svg id="planet" viewBox="0 0 140 140" role="img" aria-label="Illustration of a planet">
-      <defs>
-        <linearGradient id="planetColor" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="#8eb7c9"/>
-          <stop offset="100%" stop-color="#315b7c"/>
-        </linearGradient>
-      </defs>
-      <circle cx="70" cy="70" r="48" fill="url(#planetColor)" stroke="#27475d" stroke-width="2"/>
-      <path d="M35 49 L52 37 L65 47 L59 61 L43 65 Z M75 31 L91 42 L86 55 L72 51 Z M68 75 L85 66 L102 81 L94 101 L77 105 L65 91 Z M35 82 L51 76 L57 93 L46 105 L34 97 Z" fill="#80a67c"/>
-      <ellipse cx="70" cy="70" rx="59" ry="17" fill="none" stroke="#81552d" stroke-width="2" stroke-dasharray="5 4" transform="rotate(-25 70 70)"/>
-    </svg>
-    <p class="small">Illustrative planet — not to scale</p>
-  </div>
-
-  <div class="control">
-    <label for="mass">
-      <span>Planet mass (M)</span>
-      <span id="massValue">5.972 × 10²⁴ kg</span>
-    </label>
-    <input id="mass" type="range" min="1" max="10" value="5.972" step="0.001">
-    <p class="small">Move right to increase mass; move left to decrease it.</p>
-  </div>
-
-  <div class="control">
-    <label for="distance">
-      <span>Distance from center (r)</span>
-      <span id="distanceValue">6,371 km</span>
-    </label>
-    <input id="distance" type="range" min="3000" max="20000" value="6371" step="1">
-    <p class="small">This distance is measured from the planet's center, not from its surface.</p>
-  </div>
-
-  <div class="stats">
-    <div class="stat">
-      <span class="small">Gravitational acceleration</span>
-      <strong id="gravityValue">9.82 m/s²</strong>
-    </div>
-    <div class="stat">
-      <span class="small">Distance from center</span>
-      <strong id="distanceResult">6,371 km</strong>
-    </div>
-    <div class="stat">
-      <span class="small">Planet mass</span>
-      <strong id="massResult">5.972 × 10²⁴ kg</strong>
-    </div>
-  </div>
-
-  <h3>Live equation</h3>
-  <div class="formula" id="liveFormula" aria-live="polite">
-    g = (G × M) / r²
-  </div>
-  <p id="explanation" aria-live="polite">The result changes when mass or distance changes.</p>
-  <button id="resetLab" type="button" class="secondary">Reset values</button>
-
-  <p class="small">This is an idealized Newtonian model. It assumes a spherical body and uses the distance from its center. It does not include rotation, local terrain, or other small effects.</p>
+<div class="control">
+<label for="mass"><span>Planet mass (M)</span><span id="massValue">5.972 × 10²⁴ kg</span></label>
+<input id="mass" type="range" min="1" max="10" value="5.972" step="0.001">
+<p class="small">Move right to increase mass; move left to decrease it.</p>
+</div>
+<div class="control">
+<label for="distance"><span>Distance from center (r)</span><span id="distanceValue">6,371 km</span></label>
+<input id="distance" type="range" min="3000" max="20000" value="6371" step="1">
+<p class="small">This distance is measured from the planet's center, not from its surface.</p>
+</div>
+<div class="stats">
+<div class="stat"><span class="small">Gravitational acceleration</span><strong id="gravityValue">9.82 m/s²</strong></div>
+<div class="stat"><span class="small">Distance from center</span><strong id="distanceResult">6,371 km</strong></div>
+<div class="stat"><span class="small">Planet mass</span><strong id="massResult">5.972 × 10²⁴ kg</strong></div>
+</div>
+<h3>Live equation</h3>
+<div class="formula" id="liveFormula">g = (G × M) / r²</div>
+<p id="explanation">The result changes when mass or distance changes.</p>
+<button id="resetLab" type="button" class="secondary">Reset values</button>
+<p class="small">This is an idealized Newtonian model. It assumes a spherical body and uses the distance from its center.</p>
 </section>
 
 <section id="aksikontal">
-  <h2>4. Developing the Aksikontal-G Hypothesis</h2>
-  <p>Aksikontal-G is a proposed exploration of mass and gravity. The first step is to understand the established Newtonian model before suggesting any additional term.</p>
-  <h3>Step 1 — Establish a baseline</h3>
-  <div class="formula">g = GM / r²</div>
-  <p>This equation provides a reference prediction. A new model should first reproduce known results under conditions where Newtonian gravity is accurate.</p>
+<h2>5. Developing the Aksikontal-G Hypothesis</h2>
+<p>Aksikontal-G is a proposed exploration of mass and gravity. The first step is to understand the established Newtonian model before suggesting any additional term.</p>
+<h3>Step 1 — Establish a baseline</h3>
+<div class="formula">g = GM / r²</div>
+<p>This equation provides a reference prediction.</p>
+<h3>Step 2 — State a hypothesis clearly</h3>
+<p>One possible mathematical exercise is to investigate whether a small additional term could be tested against the baseline model:</p>
+<div class="formula">g<sub>A</sub> = GM / r² + K / r³</div>
+<p>In this illustrative expression, <strong>K</strong> is an unknown parameter. For the added term to have units of acceleration, K must have units of m⁴/s².</p>
+<div class="note"><strong>This is only a proposed model form.</strong> It is not a verified Aksikontal law. The form and parameter would need scientific justification and testing.</div>
+<h3>Step 3 — What would testing require?</h3>
+<ol>
+<li>Define the hypothesis and the physical meaning of K.</li>
+<li>Derive predictions for specific conditions.</li>
+<li>Compare predictions with reliable measurements.</li>
+<li>Estimate uncertainty and account for known effects.</li>
+<li>Check whether the hypothesis predicts anything measurable beyond the established model.</li>
+</ol>
+</section>
 
-  <h3>Step 2 — State a hypothesis clearly</h3>
-  <p>One possible mathematical exercise is to investigate whether a small additional term could be tested against the baseline model. For example, a tentative expression could be written as:</p>
-  <div class="formula">g<sub>A</sub> = GM / r² + K / r³</div>
-  <p>In this illustrative expression, <strong>K</strong> is an unknown parameter. For the added term to have units of acceleration, K must have units of m⁴/s².</p>
-  <div class="note">
-    <strong>This is only a proposed model form.</strong> It is not a verified Aksikontal law, and there is currently no evidence presented here that an additional term or an influence from another universe exists. The form and parameter would need scientific justification and testing.
-  </div>
-  <h3>Step 3 — What would testing require?</h3>
-  <ol>
-    <li>Define the hypothesis and the physical meaning of K.</li>
-    <li>Derive predictions for specific conditions.</li>
-    <li>Compare predictions with reliable measurements.</li>
-    <li>Estimate uncertainty and account for known effects.</li>
-    <li>Check whether the hypothesis predicts anything measurable beyond the established model.</li>
-  </ol>
+<section id="games">
+<h2>6. Aksikontal Learning Games</h2>
+<p>These activities help you learn the symbols and the difference between a concept and a finished formula.</p>
+<h3>Game 1 — Match the symbol</h3>
+<p>Choose the meaning of the letter shown.</p>
+<div class="formula" id="quizLetter">M</div>
+<div style="display:flex;gap:8px;flex-wrap:wrap">
+<button type="button" class="secondary symbolChoice">Probability of an event</button>
+<button type="button" class="secondary symbolChoice">Mass and gravity concept</button>
+<button type="button" class="secondary symbolChoice">Output/result</button>
+</div>
+<p id="symbolFeedback">Pick an answer to begin.</p>
+<button id="nextSymbol" type="button">Next letter</button>
+<hr style="border:0;border-top:1px solid var(--line);margin:24px 0">
+<h3>Game 2 — Build the idea</h3>
+<p>Which expression matches our current starting framework?</p>
+<div style="display:flex;gap:8px;flex-wrap:wrap">
+<button type="button" class="secondary formulaChoice" data-answer="wrong">A = M + V + E</button>
+<button type="button" class="secondary formulaChoice" data-answer="correct">A = f(M, V, E)</button>
+<button type="button" class="secondary formulaChoice" data-answer="wrong">A = M / V</button>
+</div>
+<p id="formulaFeedback">Choose one expression.</p>
+<div class="note"><strong>Remember:</strong> A = f(M, V, E) records the idea that A depends on a relationship involving M, V, and E. It does not yet tell us the exact calculation.</div>
 </section>
 
 <section id="method">
-  <h2>5. The Scientific Method</h2>
-  <p>A formula is a mathematical description. Writing an equation alone does not prove that nature follows it.</p>
-  <ul>
-    <li><strong>Observation:</strong> record what happens.</li>
-    <li><strong>Question:</strong> identify what is not yet understood.</li>
-    <li><strong>Hypothesis:</strong> propose a testable explanation.</li>
-    <li><strong>Prediction:</strong> calculate what should happen if the hypothesis is useful.</li>
-    <li><strong>Test:</strong> compare the prediction with observations.</li>
-    <li><strong>Revision:</strong> change or reject the model when the evidence requires it.</li>
-  </ul>
-  <h3>Other areas under development</h3>
-  <p><strong>Aksikontal-V:</strong> explores a proposed relationship between voltage and velocity. The precise relationship and conditions still need to be defined.</p>
-  <p><strong>Aksikontal-E:</strong> explores probability and possible outcomes. A precise mathematical definition is still needed before a formula can be evaluated.</p>
-  <div class="science">
-    The purpose of this learning center is to develop ideas carefully, explain the mathematics transparently, and distinguish established evidence from open questions.
-  </div>
+<h2>7. The Scientific Method</h2>
+<p>A formula is a mathematical description. Writing an equation alone does not prove that nature follows it.</p>
+<ul>
+<li><strong>Observation:</strong> record what happens.</li>
+<li><strong>Question:</strong> identify what is not yet understood.</li>
+<li><strong>Hypothesis:</strong> propose a testable explanation.</li>
+<li><strong>Prediction:</strong> calculate what should happen if the hypothesis is useful.</li>
+<li><strong>Test:</strong> compare the prediction with observations.</li>
+<li><strong>Revision:</strong> change or reject the model when the evidence requires it.</li>
+</ul>
+<h3>Other areas under development</h3>
+<p><strong>Aksikontal-V:</strong> explores a proposed relationship between voltage and velocity. The precise relationship and conditions still need to be defined.</p>
+<p><strong>Aksikontal-E:</strong> explores probability and possible outcomes. A precise mathematical definition is still needed before a formula can be evaluated.</p>
+<div class="science">The purpose of this learning center is to develop ideas carefully, explain the mathematics transparently, and distinguish established evidence from open questions.</div>
 </section>
 </main>
 
 <footer>
-  <p><strong>The Aksikontal Learning Center</strong></p>
-  <p>Independent learning project by Aliy Agni</p>
-  <p class="small">Educational content. Hypotheses are not established scientific facts.</p>
+<p><strong>The Aksikontal Learning Center</strong></p>
+<p>Independent learning project by Aliy Agni</p>
+<p class="small">Educational content. Hypotheses are not established scientific facts.</p>
 </footer>
 
 <script>
 (function () {
-  const G = 6.67430e-11;
-  const mass = document.getElementById("mass");
-  const distance = document.getElementById("distance");
+const G = 6.67430e-11;
+const mass = document.getElementById("mass");
+const distance = document.getElementById("distance");
 
-  const massValue = document.getElementById("massValue");
-  const distanceValue = document.getElementById("distanceValue");
-  const gravityValue = document.getElementById("gravityValue");
-  const distanceResult = document.getElementById("distanceResult");
-  const massResult = document.getElementById("massResult");
-  const liveFormula = document.getElementById("liveFormula");
-  const explanation = document.getElementById("explanation");
+function number(value, digits) {
+return Number(value).toLocaleString("en-US",{maximumFractionDigits:digits});
+}
 
-  function number(value, digits) {
-    return Number(value).toLocaleString("en-US", {
-      maximumFractionDigits: digits
-    });
-  }
+function updateLab() {
+const M = Number(mass.value) * 1e24;
+const rKm = Number(distance.value);
+const r = rKm * 1000;
+const g = G * M / (r*r);
+const fm = number(Number(mass.value),3);
+const fd = number(rKm,0);
+const fg = number(g,4);
 
-  function updateLab() {
-    const M = Number(mass.value) * 1e24;
-    const rKm = Number(distance.value);
-    const r = rKm * 1000;
-    const g = G * M / (r * r);
+document.getElementById("massValue").textContent = fm+" × 10²⁴ kg";
+document.getElementById("distanceValue").textContent = fd+" km";
+document.getElementById("gravityValue").textContent = fg+" m/s²";
+document.getElementById("distanceResult").textContent = fd+" km";
+document.getElementById("massResult").textContent = fm+" × 10²⁴ kg";
+document.getElementById("liveFormula").textContent =
+"g = (6.67430 × 10⁻¹¹ × "+fm+" × 10²⁴) / ("+fd+" × 10³)² = "+fg+" m/s²";
+document.getElementById("explanation").textContent =
+"With this mass and distance, the Newtonian model predicts "+fg+" m/s². Increasing mass increases g; increasing distance decreases it.";
+}
 
-    const formattedMass = number(Number(mass.value), 3);
-    const formattedDistance = number(rKm, 0);
-    const formattedG = number(g, 4);
+mass.addEventListener("input",updateLab);
+distance.addEventListener("input",updateLab);
+document.getElementById("resetLab").addEventListener("click",function(){
+mass.value="5.972";
+distance.value="6371";
+updateLab();
+});
+updateLab();
 
-    massValue.textContent = formattedMass + " × 10²⁴ kg";
-    distanceValue.textContent = formattedDistance + " km";
-    gravityValue.textContent = formattedG + " m/s²";
-    distanceResult.textContent = formattedDistance + " km";
-    massResult.textContent = formattedMass + " × 10²⁴ kg";
+const chance=document.getElementById("chance");
+function updateChance(){
+const e=Number(chance.value);
+document.getElementById("chanceValue").textContent=e+"%";
+document.getElementById("rightChance").textContent=e+"%";
+document.getElementById("otherChance").textContent=(100-e)+"%";
+const right=Math.round(e/20);
+const left=5-right;
+document.getElementById("chanceTrack").textContent=
+(right?("➡️ ".repeat(right)):"")+(left?("⬅️ ".repeat(left)):"");
+document.getElementById("chanceExplain").textContent=
+"A "+e+"% chance means "+e+" out of 100 equally likely trials would be expected to move right in the long run. It is not a guarantee for every trial.";
+}
+chance.addEventListener("input",updateChance);
+updateChance();
 
-    liveFormula.textContent =
-      "g = (6.67430 × 10⁻¹¹ × " +
-      formattedMass + " × 10²⁴) / (" +
-      formattedDistance + " × 10³)² = " +
-      formattedG + " m/s²";
+const questions=[
+{letter:"M",choices:["Probability of an event","Mass and gravity concept","Output/result"],correct:1,explanation:"M is our working concept combining mass and gravitational attraction."},
+{letter:"V",choices:["Voltage and velocity concept","Output/result","Distance from a planet's center"],correct:0,explanation:"V is our proposed connection between voltage and velocity; its exact equation is still undefined."},
+{letter:"E",choices:["Mass and gravity concept","Event probability","Gravitational constant"],correct:1,explanation:"E represents event probability in our current notes."},
+{letter:"A",choices:["Output/result","Voltage only","Planet mass only"],correct:0,explanation:"A is the output or result described by the function."}
+];
+let questionIndex=0;
 
-    explanation.textContent =
-      "With this mass and distance, the Newtonian model predicts " +
-      formattedG + " m/s². Increasing mass increases g; increasing " +
-      "distance decreases g according to the inverse-square relationship.";
-  }
+function renderQuestion(){
+const q=questions[questionIndex];
+document.getElementById("quizLetter").textContent=q.letter;
+document.getElementById("symbolFeedback").textContent="Pick an answer to begin.";
+document.querySelectorAll(".symbolChoice").forEach((button,index)=>{
+button.textContent=q.choices[index];
+button.disabled=false;
+button.onclick=function(){
+document.getElementById("symbolFeedback").textContent=
+index===q.correct?"Correct! "+q.explanation:"Not quite. "+q.explanation;
+document.querySelectorAll(".symbolChoice").forEach(b=>b.disabled=true);
+};
+});
+}
+document.getElementById("nextSymbol").addEventListener("click",function(){
+questionIndex=(questionIndex+1)%questions.length;
+renderQuestion();
+});
+renderQuestion();
 
-  mass.addEventListener("input", updateLab);
-  distance.addEventListener("input", updateLab);
-
-  document.getElementById("resetLab").addEventListener("click", function () {
-    mass.value = "5.972";
-    distance.value = "6371";
-    updateLab();
-  });
-
-  updateLab();
+document.querySelectorAll(".formulaChoice").forEach(button=>{
+button.addEventListener("click",function(){
+document.getElementById("formulaFeedback").textContent=
+button.dataset.answer==="correct"
+?"That's our recorded starting framework. The function f still needs a precise definition before we can calculate A."
+:"Not the starting expression recorded in our notes. We have not established a simple plus or division formula for A.";
+});
+});
 })();
 </script>
 </body>
