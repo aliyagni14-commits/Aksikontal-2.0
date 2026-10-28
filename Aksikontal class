@@ -1,1 +1,339 @@
 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#eee4ce">
+<title>Aksikontal Learning Center</title>
+<style>
+:root {
+  --paper: #f5efdf;
+  --ink: #302a20;
+  --brown: #684a30;
+  --line: #c9b99b;
+  --muted: #756b5b;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.75;
+}
+header {
+  padding: 32px 20px 24px;
+  text-align: center;
+  border-bottom: 3px double var(--line);
+}
+.kicker {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--brown);
+}
+h1 {
+  font-size: clamp(30px, 8vw, 46px);
+  line-height: 1.15;
+  margin: 18px 0 12px;
+  font-weight: normal;
+}
+.subtitle {
+  max-width: 520px;
+  margin: auto;
+  color: var(--muted);
+  font-style: italic;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  padding: 13px 10px;
+  border-bottom: 1px solid var(--line);
+}
+nav a {
+  color: var(--brown);
+  text-decoration: none;
+  font-size: 14px;
+}
+main {
+  width: min(760px, 100%);
+  margin: auto;
+  padding: 22px 18px 45px;
+}
+h2 {
+  font-size: 26px;
+  font-weight: normal;
+  line-height: 1.3;
+}
+h3 { color: var(--brown); }
+section {
+  padding: 10px 0 22px;
+  border-bottom: 1px solid var(--line);
+  scroll-margin-top: 15px;
+}
+.label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--brown);
+}
+.card {
+  border: 1px solid var(--line);
+  padding: 16px;
+  margin: 14px 0;
+  background: rgba(255,255,255,.22);
+}
+.card h3 { margin-top: 0; }
+.button {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 1px solid var(--brown);
+  color: var(--brown);
+  text-decoration: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 14px;
+}
+.formula {
+  padding: 18px 8px;
+  text-align: center;
+  font-size: clamp(19px, 5vw, 27px);
+  overflow-wrap: anywhere;
+  border-block: 1px solid var(--line);
+}
+.note {
+  padding: 12px;
+  border-left: 3px solid var(--brown);
+  color: var(--muted);
+  font-size: 14px;
+}
+button {
+  cursor: pointer;
+  background: var(--brown);
+  color: var(--paper);
+  border: 0;
+  padding: 10px 14px;
+  font-family: inherit;
+  font-size: 15px;
+}
+input {
+  width: 100%;
+  max-width: 220px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  background: #fffaf0;
+  color: var(--ink);
+  font-size: 16px;
+}
+#result { font-weight: bold; }
+footer {
+  text-align: center;
+  padding: 22px 15px;
+  border-top: 3px double var(--line);
+  color: var(--muted);
+  font-size: 13px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="kicker">JOD Studios · Research & Learning</div>
+  <h1>Aksikontal<br>Learning Center</h1>
+  <p class="subtitle">
+    A place to learn, question, calculate, and explore ideas.
+  </p>
+  <p>Versi 1.0 · Edisi Pembelajaran Awal</p>
+</header>
+
+<nav>
+  <a href="#beranda">Beranda</a>
+  <a href="#kelas">Kelas</a>
+  <a href="#lab">Laboratorium</a>
+  <a href="#catatan">Catatan</a>
+</nav>
+
+<main>
+<section id="beranda">
+  <div class="label">Selamat datang</div>
+  <h2>Pengetahuan dimulai dari pertanyaan.</h2>
+  <p>
+    Aksikontal Learning Center adalah tempat untuk
+    mempelajari sains, menyusun model matematika,
+    dan memeriksa gagasan melalui penalaran serta
+    pengujian.
+  </p>
+  <p class="note">
+    Prinsip kami: bedakan fakta yang sudah didukung
+    bukti, hasil perhitungan, dan hipotesis yang
+    masih harus diuji.
+  </p>
+</section>
+
+<section id="kelas">
+  <div class="label">Daftar pelajaran</div>
+  <h2>Ruang Kelas</h2>
+
+  <div class="card">
+    <h3>Kelas I — Aksikontal-G</h3>
+    <p>
+      Mempelajari gravitasi, massa, jarak, dan
+      hipotesis pengaruh tambahan.
+    </p>
+    <a class="button" href="#gravitasi">Buka materi</a>
+  </div>
+
+  <div class="card">
+    <h3>Kelas II — Aksikontal-V</h3>
+    <p>
+      Menyelidiki ide hubungan tegangan listrik
+      dan kecepatan. Model matematikanya masih
+      dalam pengembangan.
+    </p>
+    <a class="button" href="#v">Baca pengantar</a>
+  </div>
+
+  <div class="card">
+    <h3>Kelas III — Aksikontal-E</h3>
+    <p>
+      Mempelajari probabilitas dan cara
+      memperkirakan kemungkinan suatu kejadian.
+    </p>
+    <a class="button" href="#e">Baca pengantar</a>
+  </div>
+</section>
+
+<section id="gravitasi">
+  <div class="label">Pelajaran pertama · Fisika</div>
+  <h2>Dasar Gravitasi</h2>
+  <p>
+    Menurut model gravitasi Newton, besar percepatan
+    gravitasi di luar benda berbentuk bola yang
+    simetris dapat ditulis:
+  </p>
+  <div class="formula">
+    g = GM / r²
+  </div>
+  <p><b>g</b> adalah percepatan gravitasi, <b>G</b>
+    konstanta gravitasi universal, <b>M</b> massa
+    benda sumber, dan <b>r</b> jarak dari pusat
+    benda tersebut.</p>
+
+  <h3>Coba hitung</h3>
+  <p>
+    Untuk latihan, jika gravitasi awal 80 unit dan
+    jarak menjadi dua kali lipat, berapa nilai
+    barunya menurut aturan kuadrat terbalik?
+  </p>
+  <p><i>Masukkan jawaban:</i></p>
+  <input id="answer" type="number" placeholder="Jawabanmu">
+  <button onclick="checkAnswer()">Periksa</button>
+  <p id="result" aria-live="polite"></p>
+  <p class="note">
+    Angka latihan ini merupakan contoh matematika,
+    bukan pengukuran gravitasi di lokasi tertentu.
+  </p>
+</section>
+
+<section id="lab">
+  <div class="label">Eksperimen matematika</div>
+  <h2>Laboratorium Simulasi</h2>
+  <p>
+    Ubah jarak untuk melihat prediksi model Newton
+    jika gravitasi awal dianggap 100 unit.
+  </p>
+  <label for="distance">Pengali jarak (1–10):</label>
+  <p>
+    <input id="distance" type="number" min="1"
+      max="10" value="2">
+    <button onclick="simulate()">Hitung</button>
+  </p>
+  <div class="card">
+    <p>Jarak: <b id="distanceOut">2</b> kali</p>
+    <p>Prediksi Newton: <b id="gravityOut">25</b> unit</p>
+  </div>
+  <p class="note">
+    Simulasi menggunakan angka asumsi untuk belajar.
+    Ini bukan bukti hipotesis Aksikontal-G.
+  </p>
+</section>
+
+<section id="v">
+  <div class="label">Program penelitian</div>
+  <h2>Aksikontal-V</h2>
+  <p>
+    Tujuannya mengeksplorasi hubungan tegangan
+    listrik dan kecepatan. Definisi variabel,
+    persamaan, serta cara pengujian harus
+    diperjelas sebelum membuat klaim.
+  </p>
+  <p class="note">Status: konsep dalam pengembangan.</p>
+</section>
+
+<section id="e">
+  <div class="label">Program penelitian</div>
+  <h2>Aksikontal-E</h2>
+  <p>
+    Tujuannya mempelajari peluang suatu kejadian,
+    termasuk kemungkinan beberapa hasil gerak.
+    Prediksi probabilitas perlu didasarkan pada
+    model dan data yang sesuai.
+  </p>
+  <p class="note">Status: konsep dalam pengembangan.</p>
+</section>
+
+<section id="catatan">
+  <div class="label">Arsip ilmiah</div>
+  <h2>Catatan Penelitian</h2>
+  <p>
+    Setiap catatan perlu memuat tanggal, pertanyaan,
+    definisi variabel, asumsi, perhitungan,
+    hasil, dan keterbatasan.
+  </p>
+  <p>
+    Jangan menyamakan hasil simulasi dengan
+    eksperimen nyata. Hipotesis dapat direvisi
+    jika bukti baru tidak sesuai.
+  </p>
+</section>
+</main>
+
+<footer>
+  <p><b>THE AKSIKONTAL DOCUMENT</b></p>
+  <p>Created by Aliy Agni Anw</p>
+  <p>Belajar · Meneliti · Menguji · Memperbaiki</p>
+</footer>
+
+<script>
+function checkAnswer() {
+  const value = Number(document.getElementById("answer").value);
+  const result = document.getElementById("result");
+  if (document.getElementById("answer").value === "") {
+    result.textContent = "Masukkan jawaban dahulu.";
+  } else if (value === 20) {
+    result.textContent = "Benar! 80 dibagi 2² = 20 unit.";
+  } else {
+    result.textContent = "Coba lagi: kuadratkan 2, lalu bagi 80.";
+  }
+}
+
+function simulate() {
+  const input = document.getElementById("distance");
+  const n = Number(input.value);
+  if (!Number.isInteger(n) || n < 1 || n > 10) {
+    alert("Masukkan bilangan bulat dari 1 sampai 10.");
+    return;
+  }
+  document.getElementById("distanceOut").textContent = n;
+  document.getElementById("gravityOut").textContent =
+    (100 / (n * n)).toFixed(2);
+}
+</script>
+
+</body>
+</html>
+
